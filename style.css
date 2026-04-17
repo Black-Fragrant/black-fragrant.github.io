@@ -36,10 +36,13 @@
 }
 
 #navLinks {
-    margin-left: auto;      /* pushes the whole group to the right */
-    display: flex;          /* lays out the links horizontally */
-    gap: 40px;              /* spacing between links */
-    align-items: center;    /* vertically centered */
+    margin-left: auto;
+    display: flex;
+    gap: 28px;              /* reduced from 40px */
+    align-items: center;
+    white-space: nowrap;    /* prevents wrapping and clipping */
+    padding-right: 20px;    /* adds breathing room from screen edge */
+    box-sizing: border-box;
 }
 
 /* Banner container (static, stays at top of the page) */
