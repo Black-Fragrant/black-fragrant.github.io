@@ -120,3 +120,56 @@ body.dark-mode {
    We do NOT touch colored text.
    Only body text color flips.
 */
+
+/* Footer Block */
+#siteFooter {
+    width: 100%;
+    background-color: #1c2735;   /* dark grey-blue */
+    padding: 40px 0;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centered content */
+#footerContent {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Title text */
+#footerContent h3 {
+    color: white;
+    font-size: 14px;        /* very small */
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Bullet list */
+#footerLinks {
+    list-style-type: disc;  /* bullet points */
+    padding-left: 20px;     /* aligns bullets nicely */
+    margin: 0 auto;
+    display: inline-block;  /* keeps list centered */
+    text-align: left;       /* bullets align cleanly */
+}
+
+/* Bullet items */
+#footerLinks li {
+    margin: 6px 0;
+}
+
+/* Links */
+#footerLinks a {
+    color: white;
+    font-size: 12px;        /* tiny text */
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+#footerLinks a:hover {
+    opacity: 0.6;
+}
+
