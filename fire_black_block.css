@@ -1,47 +1,72 @@
-/* Checkerboard block */
-#checkerSection {
+/* Fire Black block */
+#fireBlackSection {
     width: 100%;
-    padding: 60px 0;
-    margin-top: 80px;
+    padding: 60px 0;                 /* same height as Fire Gold */
+    margin-top: 80px;                /* same spacing */
     display: flex;
     justify-content: center;
+    color: inherit;                  /* base color, will be overridden below */
 }
 
 /* Light mode checkerboard + inverse text color */
-#checkerSection {
+#fireBlackSection {
     background-image:
         linear-gradient(45deg, #000 25%, #1a1a1a 25%, #1a1a1a 50%, #000 50%, #000 75%, #1a1a1a 75%);
     background-size: 60px 60px;
-    color: white;                     /* inverse of light mode text */
+    color: white;                    /* inverse of light mode text */
 }
 
 /* Dark mode checkerboard + inverse text color */
-body.dark-mode #checkerSection {
+body.dark-mode #fireBlackSection {
     background-image:
         linear-gradient(45deg, #fff 25%, #e6e6e6 25%, #e6e6e6 50%, #fff 50%, #fff 75%, #e6e6e6 75%);
     background-size: 60px 60px;
-    color: black;                     /* inverse of dark mode text */
+    color: black;                    /* inverse of dark mode text */
 }
 
 /* Content wrapper */
-#checkerContent {
+#fireBlackContent {
     width: 80%;
     max-width: 1100px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* LEFT SIDE: Text */
+#fireBlackText {
+    flex: 1;
 }
 
 /* Title */
-#checkerContent h2 {
+#fireBlackText h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
+    color: inherit;
 }
 
 /* Paragraph */
-#checkerContent p {
+#fireBlackText p {
     font-family: 'Exo 2', sans-serif;
     font-size: 14px;
     line-height: 1.8;
     opacity: 0.9;
+    color: inherit;
+}
+
+/* RIGHT SIDE: GIF */
+#fireBlackImageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#fireBlackImageWrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
