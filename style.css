@@ -1,0 +1,38 @@
+/* Default (light mode) */
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode class applied to <body> */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Floating toggle button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #444;
+}
+
+/* IMPORTANT:
+   We do NOT touch colored text.
+   Only body text color flips.
+*/
