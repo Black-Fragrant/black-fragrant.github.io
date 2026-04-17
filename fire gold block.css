@@ -1,0 +1,55 @@
+/* Entire block */
+#fireGoldSection {
+    width: 100%;
+    background-color: #5a4a1f;     /* dark gold, close to footer darkness */
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Content wrapper */
+#fireGoldContent {
+    width: 80%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;           /* vertically centers GIF + text */
+    justify-content: space-between;
+    gap: 60px;
+    color: white;                  /* all text white */
+}
+
+/* Left side: GIF */
+#fireGoldImageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#fireGoldImageWrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Right side: Text */
+#fireGoldText {
+    flex: 1;
+    color: white;
+}
+
+/* Title */
+#fireGoldText h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+#fireGoldText p {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
