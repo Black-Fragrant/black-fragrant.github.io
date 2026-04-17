@@ -1,0 +1,20 @@
+#introSection {
+    text-align: center;
+    margin-top: 180px; /* pushes it below the banner */
+    font-family: 'Orbitron', sans-serif;
+    padding: 0 20px;
+}
+
+#introSection h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+#introSection p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
