@@ -1,6 +1,6 @@
 #introSection {
     text-align: center;
-    margin-top: 180px; /* pushes it below the banner */
+    margin-top: 80px; /* pushes it below the banner */
     font-family: 'Orbitron', sans-serif;
     padding: 0 20px;
 }
@@ -13,8 +13,11 @@
 }
 
 #introSection p {
+    font-family: 'Exo 2', sans-serif;
     font-size: 14px;
     line-height: 1.8;
     max-width: 700px;
     margin: 0 auto;
+    color: white;
+    opacity: 0.9;
 }
