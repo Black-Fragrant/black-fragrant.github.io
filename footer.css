@@ -1,7 +1,7 @@
 /* Footer Block */
 #siteFooter {
     width: 100%;
-    background-color: #1c2735;
+    background-color: #1c2735;   /* dark grey-blue */
     padding: 40px 0;
     margin-top: 80px;
     display: flex;
@@ -9,43 +9,50 @@
     align-items: center;
 }
 
-/* Centered content */
+/* Centered content wrapper */
 #footerContent {
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
+    width: 100%;
 }
 
 /* Title text */
 #footerContent h3 {
-    color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: inherit;              /* follows dark/light mode */
 }
 
-/* Bullet list */
-#footerLinks {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: left;
+/* Two-column container */
+#footerColumns {
+    display: flex;
+    justify-content: center;     /* keeps columns centered as a group */
+    gap: 80px;                   /* space between left and right columns */
+    margin-top: 10px;
 }
 
-/* Bullet items */
-#footerLinks li {
+/* Each column */
+.footerColumn {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;            /* aligns text inside each column */
+}
+
+/* Items inside columns */
+.footerColumn li {
     margin: 6px 0;
+    font-size: 13px;
+    color: inherit;              /* follows dark/light mode */
 }
 
 /* Links */
-#footerLinks a {
-    color: white;
-    font-size: 12px;
+.footerColumn a {
+    color: #f0b413;              /* gold accent for links */
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
 
-#footerLinks a:hover {
+.footerColumn a:hover {
     opacity: 0.6;
 }
