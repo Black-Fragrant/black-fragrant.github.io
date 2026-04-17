@@ -1,6 +1,6 @@
 /* Banner container (fixed size, unaffected by dark mode) */
 #topBanner {
-    width: 1920px;
+    width: 100vw;
     height: 400px;
     overflow: hidden;
     position: fixed;
