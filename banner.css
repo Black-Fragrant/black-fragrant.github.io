@@ -1,0 +1,32 @@
+/* Banner container (static, stays at top of the page) */
+#topBanner {
+    width: 100%;
+    max-width: 1920px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 100px auto 0 auto;
+    z-index: 1;
+}
+
+/* The moving image layer */
+#bannerImage {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+/* Banner text stays above the image */
+#topBanner h2 {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #f0b413;
+}
