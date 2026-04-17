@@ -1,0 +1,51 @@
+/* Footer Block */
+#siteFooter {
+    width: 100%;
+    background-color: #1c2735;
+    padding: 40px 0;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centered content */
+#footerContent {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Title text */
+#footerContent h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Bullet list */
+#footerLinks {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Bullet items */
+#footerLinks li {
+    margin: 6px 0;
+}
+
+/* Links */
+#footerLinks a {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+#footerLinks a:hover {
+    opacity: 0.6;
+}
