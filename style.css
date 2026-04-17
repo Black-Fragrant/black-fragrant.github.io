@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 150px;
+    height: 100px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: none;
     display: flex;
@@ -15,8 +15,8 @@
 
 /* Circular icon on the left */
 #optionIcon {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 40px;
@@ -41,7 +41,7 @@
     gap: 28px;              /* reduced from 40px */
     align-items: center;
     white-space: nowrap;    /* prevents wrapping and clipping */
-    padding-right: 20px;    /* adds breathing room from screen edge */
+    right: 20px;
     box-sizing: border-box;
 }
 
@@ -49,10 +49,10 @@
 #topBanner {
     width: 100%;
     max-width: 1920px;
-    height: 300px;
+    height: 200px;
     overflow: hidden;
     position: relative;
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
     z-index: 1;
 }
 
@@ -94,7 +94,7 @@ body.dark-mode {
 
 #darkModeToggle {
     position: fixed;
-    top: 130px; /* overlaps ink bar */
+    top: 80px; /* overlaps ink bar */
     right: 30px;
     padding: 12px 20px;
     background-color: #222;
