@@ -1,5 +1,6 @@
 /* Top Option Bar (fixed, transparent ink bar) */
 #optionBar {
+    font-family: 'Orbitron', sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,15 +23,15 @@
     margin-right: 40px;
 }
 
-/* Navigation text links */
 .navLink {
-    font-size: 18px;          /* smaller, tighter */
-    font-weight: 600;         /* punchier, more UI-like */
-    letter-spacing: 1px;      /* subtle game-menu spacing */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;          /* smaller, game‑UI vibe */
+    font-weight: 600;         /* crisp, futuristic */
+    letter-spacing: 1.5px;    /* subtle sci‑fi spacing */
     color: white;
     cursor: pointer;
     transition: opacity 0.2s ease;
-    text-transform: uppercase; /* optional: very game-like */
+    text-transform: uppercase; /* optional but very game‑menu */
 }
 
 .navLink:hover {
