@@ -42,74 +42,75 @@
         });
 
 
-        /* -------------------------------
-           CYCLING + PANNING BANNER
-        --------------------------------*/
+/* -------------------------------
+   CYCLING + SMART PANNING BANNER
+--------------------------------*/
 
-        const bannerImages = [
-            'banner1.png',
-            'banner2.png',
-            'banner3.png'
-        ];
+const bannerImages = [
+    'banner1.png',
+    'banner2.png',
+    'banner3.png'
+];
 
-        const banner = document.getElementById('topBanner');
-        const img = document.getElementById('bannerImage');
+const banner = document.getElementById('topBanner');
+const img = document.getElementById('bannerImage');
 
-        let currentIndex = 0;
-        let panAnimation = null;
+let currentIndex = 0;
+let panAnimation = null;
 
-        function loadBannerImage(index) {
-            const src = bannerImages[index];
-            const temp = new Image();
-            temp.src = src;
+function loadBannerImage(index) {
+    const src = bannerImages[index];
+    const temp = new Image();
+    temp.src = src;
 
-            temp.onload = () => {
-                img.style.opacity = 0;
+    temp.onload = () => {
+        img.style.opacity = 0;
 
-                setTimeout(() => {
-                    img.src = src;
+        setTimeout(() => {
+            img.src = src;
 
-                    const imgWidth = temp.width;
-                    const visibleWidth = 1920;
+            const imgWidth = temp.width;
+            const visibleWidth = 1920;
 
-                    img.style.left = "0px";
+            img.style.left = "0px";
+            img.style.opacity = 1;
 
-                    img.style.opacity = 1;
+            if (panAnimation) cancelAnimationFrame(panAnimation);
 
-                    if (imgWidth > visibleWidth) {
-                        const extra = imgWidth - visibleWidth;
-                        const duration = 8000;
-                        const speed = extra / (duration / 1000);
+            if (imgWidth > visibleWidth) {
+                const extra = imgWidth - visibleWidth;
+                const duration = 8000;
+                const speed = extra / (duration / 1000);
 
-                        let startTime = null;
+                let startTime = null;
 
-                        if (panAnimation) cancelAnimationFrame(panAnimation);
+                function pan(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    const elapsed = timestamp - startTime;
 
-                        function pan(timestamp) {
-                            if (!startTime) startTime = timestamp;
-                            const elapsed = timestamp - startTime;
+                    const offset = Math.min(extra, (elapsed / 1000) * speed);
+                    img.style.left = `-${offset}px`;
 
-                            const offset = Math.min(extra, (elapsed / 1000) * speed);
-                            img.style.left = `-${offset}px`;
-
-                            if (elapsed < duration) {
-                                panAnimation = requestAnimationFrame(pan);
-                            }
-                        }
-
+                    if (elapsed < duration) {
                         panAnimation = requestAnimationFrame(pan);
                     }
-                }, 300);
-            };
-        }
+                }
 
-        function cycleBanner() {
-            currentIndex = (currentIndex + 1) % bannerImages.length;
-            loadBannerImage(currentIndex);
-        }
+                panAnimation = requestAnimationFrame(pan);
+            } else {
+                img.style.left = "0px";
+            }
+        }, 300);
+    };
+}
 
-        loadBannerImage(0);
-        setInterval(cycleBanner, 8000);
+function cycleBanner() {
+    currentIndex = (currentIndex + 1) % bannerImages.length;
+    loadBannerImage(currentIndex);
+}
+
+loadBannerImage(0);
+setInterval(cycleBanner, 8000);
 
     </script>
 
