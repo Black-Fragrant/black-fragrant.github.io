@@ -24,11 +24,13 @@
 
 /* Navigation text links */
 .navLink {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 18px;          /* smaller, tighter */
+    font-weight: 600;         /* punchier, more UI-like */
+    letter-spacing: 1px;      /* subtle game-menu spacing */
     color: white;
     cursor: pointer;
     transition: opacity 0.2s ease;
+    text-transform: uppercase; /* optional: very game-like */
 }
 
 .navLink:hover {
@@ -36,13 +38,12 @@
 }
 
 #navLinks {
-    margin-left: auto;
     display: flex;
-    gap: 28px;              /* reduced from 40px */
+    gap: 28px;
     align-items: center;
-    white-space: nowrap;    /* prevents wrapping and clipping */
-    right-padding: 60px;
-    box-sizing: border-box;
+    white-space: nowrap;
+    padding-right: 60px;   /* corrected from right-padding */
+    margin-left: 200px;    /* NEW: pulls the nav cluster inward */
 }
 
 /* Banner container (static, stays at top of the page) */
