@@ -79,30 +79,31 @@ body {
     padding-top: 550px;
 }
 
-/* Dark mode class applied to <body> */
 body.dark-mode {
     background-color: black;
     color: white;
 }
 
-/* Floating toggle button (always above everything) */
 #darkModeToggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 16px;
+    top: 110px; /* overlaps ink bar */
+    right: 30px;
+    padding: 12px 20px;
     background-color: #222;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s ease;
-    z-index: 3000;
+    font-size: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 6000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 #darkModeToggle:hover {
     background-color: #444;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.45);
 }
 
 /* IMPORTANT:
