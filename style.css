@@ -76,6 +76,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 550px;
 }
 
 /* Dark mode class applied to <body> */
