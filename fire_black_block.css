@@ -1,24 +1,24 @@
 /* Checkerboard block */
 #checkerSection {
     width: 100%;
-    padding: 60px 0;                 /* same height as gold block */
-    margin-top: 80px;                /* same spacing as gold block */
+    padding: 60px 0;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
-    color: white;                    /* always white text */
+    color: inherit;                 /* inherits body text color */
 }
 
 /* Light mode checkerboard */
 #checkerSection {
     background-image:
-        linear-gradient(45deg, #000 25%, #333 25%, #333 50%, #000 50%, #000 75%, #333 75%);
-    background-size: 60px 60px;      /* size of squares */
+        linear-gradient(45deg, #000 25%, #1a1a1a 25%, #1a1a1a 50%, #000 50%, #000 75%, #1a1a1a 75%);
+    background-size: 60px 60px;
 }
 
 /* Dark mode checkerboard */
 body.dark-mode #checkerSection {
     background-image:
-        linear-gradient(45deg, #fff 25%, #ccc 25%, #ccc 50%, #fff 50%, #fff 75%, #ccc 75%);
+        linear-gradient(45deg, #fff 25%, #e6e6e6 25%, #e6e6e6 50%, #fff 50%, #fff 75%, #e6e6e6 75%);
     background-size: 60px 60px;
 }
 
@@ -35,6 +35,7 @@ body.dark-mode #checkerSection {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
+    color: inherit;
 }
 
 /* Paragraph */
@@ -43,4 +44,5 @@ body.dark-mode #checkerSection {
     font-size: 14px;
     line-height: 1.8;
     opacity: 0.9;
+    color: inherit;
 }
