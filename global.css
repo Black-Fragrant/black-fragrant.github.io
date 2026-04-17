@@ -1,0 +1,5 @@
+/* Global resets and shared rules */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
