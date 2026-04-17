@@ -1,24 +1,22 @@
 /* Banner container (fixed size, unaffected by dark mode) */
 #topBanner {
     width: 1920px;
-    height: 200px;
+    height: 400px;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* The moving image layer */
 #bannerImage {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* vertically center the 200px slice */
+    transform: translateY(-50%);
     height: auto;
+    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
