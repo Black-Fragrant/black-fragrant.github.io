@@ -60,6 +60,7 @@ body.dark-mode {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s ease;
+    z-index: 2000;
 }
 
 #darkModeToggle:hover {
