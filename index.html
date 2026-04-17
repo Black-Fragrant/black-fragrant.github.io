@@ -7,12 +7,13 @@
 </head>
 
 <body>
-    
+
+    <!-- Top Banner with cycling/panning image -->
     <div id="topBanner">
         <img id="bannerImage" src="" alt="">
         <h2>BlackFragrant</h2>
     </div>
-    
+
     <!-- Floating Dark Mode Button -->
     <button id="darkModeToggle">Dark Mode</button>
 
@@ -20,10 +21,13 @@
     <h1>BlackFragrant</h1>
     <p>Welcome to the beginning.</p>
 
-    <!-- Dark Mode Script -->
+    <!-- Scripts -->
     <script>
         console.log("Script is running!");
 
+        /* -------------------------------
+           DARK MODE TOGGLE
+        --------------------------------*/
         const button = document.getElementById('darkModeToggle');
         const body = document.body;
 
@@ -36,8 +40,78 @@
                 button.textContent = 'Dark Mode';
             }
         });
+
+
+        /* -------------------------------
+           CYCLING + PANNING BANNER
+        --------------------------------*/
+
+        const bannerImages = [
+            'banner1.jpg',
+            'banner2.jpg',
+            'banner3.jpg'
+        ];
+
+        const banner = document.getElementById('topBanner');
+        const img = document.getElementById('bannerImage');
+
+        let currentIndex = 0;
+        let panAnimation = null;
+
+        function loadBannerImage(index) {
+            const src = bannerImages[index];
+            const temp = new Image();
+            temp.src = src;
+
+            temp.onload = () => {
+                img.style.opacity = 0;
+
+                setTimeout(() => {
+                    img.src = src;
+
+                    const imgWidth = temp.width;
+                    const visibleWidth = 1920;
+
+                    img.style.left = "0px";
+
+                    img.style.opacity = 1;
+
+                    if (imgWidth > visibleWidth) {
+                        const extra = imgWidth - visibleWidth;
+                        const duration = 8000;
+                        const speed = extra / (duration / 1000);
+
+                        let startTime = null;
+
+                        if (panAnimation) cancelAnimationFrame(panAnimation);
+
+                        function pan(timestamp) {
+                            if (!startTime) startTime = timestamp;
+                            const elapsed = timestamp - startTime;
+
+                            const offset = Math.min(extra, (elapsed / 1000) * speed);
+                            img.style.left = `-${offset}px`;
+
+                            if (elapsed < duration) {
+                                panAnimation = requestAnimationFrame(pan);
+                            }
+                        }
+
+                        panAnimation = requestAnimationFrame(pan);
+                    }
+                }, 300);
+            };
+        }
+
+        function cycleBanner() {
+            currentIndex = (currentIndex + 1) % bannerImages.length;
+            loadBannerImage(currentIndex);
+        }
+
+        loadBannerImage(0);
+        setInterval(cycleBanner, 8000);
+
     </script>
 
 </body>
 </html>
-
