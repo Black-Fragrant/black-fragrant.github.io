@@ -1,0 +1,36 @@
+/* Default (light mode) */
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Dark mode toggle button */
+#darkModeToggle {
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    padding: 12px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 6000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#darkModeToggle:hover {
+    background-color: #444;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}
