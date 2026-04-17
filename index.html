@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>BlackFragrant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Floating Dark Mode Button -->
+    <button id="darkModeToggle">Dark Mode</button>
+
+    <!-- Page Content -->
     <h1>BlackFragrant</h1>
     <p>Welcome to the beginning.</p>
+
+    <!-- Dark Mode Script -->
     <script>
-    const button = document.getElementById('darkModeToggle');
-    const body = document.body;
+        const button = document.getElementById('darkModeToggle');
+        const body = document.body;
 
-    button.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
+        button.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
 
-        if (body.classList.contains('dark-mode')) {
-            button.textContent = 'Light Mode';
-        } else {
-            button.textContent = 'Dark Mode';
-        }
-    });
-</script>
-    <button id="darkModeToggle">Dark Mode</button>
+            if (body.classList.contains('dark-mode')) {
+                button.textContent = 'Light Mode';
+            } else {
+                button.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+
 </body>
 </html>
