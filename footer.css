@@ -48,11 +48,11 @@
 
 /* Links */
 .footerColumn a {
-    color: #f0b413;              /* gold accent for links */
+    color: inherit;               /* follows dark/light mode */
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
 
 .footerColumn a:hover {
-    opacity: 0.6;
+    opacity: 0.6;                 /* subtle hover fade */
 }
