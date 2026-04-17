@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     padding: 0 40px;
-    z-index: 5000; /* above everything */
+    z-index: 5000;                  /* above everything */
 }
 
 /* Circular icon on the left */
@@ -36,30 +36,29 @@
     opacity: 0.6;
 }
 
-/* Banner container (static, sits below ink bar) */
+/* Banner container (static, stays at top of the page) */
 #topBanner {
     width: 100%;
     max-width: 1920px;
     height: 400px;
     overflow: hidden;
     position: relative;
-    margin: 150px auto 0 auto; /* pushes banner below ink bar */
+    margin: 150px auto 0 auto;
     z-index: 1;
 }
 
-/* The moving image layer (updated to start at top of banner) */
+/* The moving image layer */
 #bannerImage {
     position: absolute;
-    top: 0;          /* <-- start at top of banner */
-    left: 0;
-    height: 100%;    /* fill banner height */
-    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     z-index: 0;
 }
 
-/* (Optional) Banner text — safe to remove if unused */
+/* Banner text stays above the image */
 #topBanner h2 {
     position: relative;
     z-index: 10;
@@ -77,7 +76,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
-    padding-top: 550px; /* ink bar + banner + breathing room */
+    padding-top: 550px;
 }
 
 body.dark-mode {
@@ -85,10 +84,9 @@ body.dark-mode {
     color: white;
 }
 
-/* Floating dark mode toggle (overlaps ink bar) */
 #darkModeToggle {
     position: fixed;
-    top: 130px; /* overlaps ink bar by ~20px */
+    top: 110px; /* overlaps ink bar */
     right: 30px;
     padding: 12px 20px;
     background-color: #222;
