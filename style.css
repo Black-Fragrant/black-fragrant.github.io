@@ -42,8 +42,8 @@
     max-width: 1920px;
     height: 400px;
     overflow: hidden;
-    position: relative;      /* <-- changed from fixed */
-    margin: 0 auto;          /* centers the banner */
+    position: relative;
+    margin: 150px auto 0 auto;
     z-index: 1;
 }
 
