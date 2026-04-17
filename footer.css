@@ -50,7 +50,7 @@
 
 /* Links */
 .footerColumn a {
-    color: inherit;               /* follows dark/light mode */
+    color: white;
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
