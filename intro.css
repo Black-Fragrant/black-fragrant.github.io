@@ -18,6 +18,11 @@
     line-height: 1.8;
     max-width: 700px;
     margin: 0 auto;
-    color: white;
+    color: inherit;        /* <-- lets dark mode control the color */
     opacity: 0.9;
+}
+
+/* Light mode paragraph color refinement */
+body:not(.dark-mode) #introSection p {
+    color: #333;
 }
