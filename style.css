@@ -1,13 +1,12 @@
-/* Banner container (fixed size, unaffected by dark mode) */
+/* Banner container (static, stays at top of the page) */
 #topBanner {
-    width: 100vw;
+    width: 100%;
+    max-width: 1920px;
     height: 400px;
     overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 900;
+    position: relative;      /* <-- changed from fixed */
+    margin: 0 auto;          /* centers the banner */
+    z-index: 1;
 }
 
 /* The moving image layer */
@@ -18,13 +17,13 @@
     height: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    z-index: 800;
+    z-index: 0;
 }
 
 /* Banner text stays above the image */
 #topBanner h2 {
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     margin: 0;
     font-size: 32px;
     font-weight: 600;
@@ -39,7 +38,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
-    padding-top: 420px; /* ensures content doesn't hide under 400px banner */
 }
 
 /* Dark mode class applied to <body> */
@@ -50,4 +48,25 @@ body.dark-mode {
 
 /* Floating toggle button (always above everything) */
 #darkModeToggle {
-    position: fixed
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    z-index: 3000;
+}
+
+#darkModeToggle:hover {
+    background-color: #444;
+}
+
+/* IMPORTANT:
+   We do NOT touch colored text.
+   Only body text color flips.
+*/
