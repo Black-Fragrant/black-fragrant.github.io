@@ -5,21 +5,22 @@
     margin-top: 80px;
     display: flex;
     justify-content: center;
-    color: inherit;                 /* inherits body text color */
 }
 
-/* Light mode checkerboard */
+/* Light mode checkerboard + inverse text color */
 #checkerSection {
     background-image:
         linear-gradient(45deg, #000 25%, #1a1a1a 25%, #1a1a1a 50%, #000 50%, #000 75%, #1a1a1a 75%);
     background-size: 60px 60px;
+    color: white;                     /* inverse of light mode text */
 }
 
-/* Dark mode checkerboard */
+/* Dark mode checkerboard + inverse text color */
 body.dark-mode #checkerSection {
     background-image:
         linear-gradient(45deg, #fff 25%, #e6e6e6 25%, #e6e6e6 50%, #fff 50%, #fff 75%, #e6e6e6 75%);
     background-size: 60px 60px;
+    color: black;                     /* inverse of dark mode text */
 }
 
 /* Content wrapper */
@@ -35,7 +36,6 @@ body.dark-mode #checkerSection {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
-    color: inherit;
 }
 
 /* Paragraph */
@@ -44,5 +44,4 @@ body.dark-mode #checkerSection {
     font-size: 14px;
     line-height: 1.8;
     opacity: 0.9;
-    color: inherit;
 }
