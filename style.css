@@ -76,7 +76,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
-    padding-top: 550px;
 }
 
 body.dark-mode {
@@ -86,7 +85,7 @@ body.dark-mode {
 
 #darkModeToggle {
     position: fixed;
-    top: 110px; /* overlaps ink bar */
+    top: 130px; /* overlaps ink bar */
     right: 30px;
     padding: 12px 20px;
     background-color: #222;
