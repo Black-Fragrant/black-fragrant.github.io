@@ -24,9 +24,6 @@
 
 /* Navigation text links */
 .navLink {
-    margin-left: auto; /* pushes links to the right side */
-    display: flex;
-    gap: 40px;
     font-size: 24px;
     font-weight: 500;
     color: white;
@@ -36,6 +33,13 @@
 
 .navLink:hover {
     opacity: 0.6;
+}
+
+#navLinks {
+    margin-left: auto;      /* pushes the whole group to the right */
+    display: flex;          /* lays out the links horizontally */
+    gap: 40px;              /* spacing between links */
+    align-items: center;    /* vertically centered */
 }
 
 /* Banner container (static, stays at top of the page) */
