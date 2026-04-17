@@ -26,8 +26,10 @@
 /* Two-column container */
 #footerColumns {
     display: flex;
-    justify-content: center;     /* keeps columns centered as a group */
-    gap: 80px;                   /* space between left and right columns */
+    flex-direction: row;        /* forces left-right layout */
+    justify-content: center;    /* centers the two columns as a group */
+    align-items: flex-start;    /* aligns items at the top */
+    gap: 120px;                 /* space between left and right columns */
     margin-top: 10px;
 }
 
@@ -36,7 +38,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: left;            /* aligns text inside each column */
+    text-align: left;           /* keeps text aligned inside each column */
 }
 
 /* Items inside columns */
